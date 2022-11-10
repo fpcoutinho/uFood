@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1 class="loginheader">Cadastre-se!</h1>
+<div id="visualizalogin">
+  <div class="login">
+    <form class="site-form" action="/accounts/signup/" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <button type="submit" class="btn btn-outline-secondary" value="Signup">Sign up</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
